@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/note_background"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:focusableInTouchMode="true"
+        app:layout_constraintRight_toLeftOf="@id/notes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dateCreated"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/deleteButton"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.87"
+        android:layout_marginStart="@dimen/_5sdp" />
+
+    <TextView
+        android:id="@+id/dateCreated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintRight_toLeftOf="@id/notes"
+        app:layout_constraintStart_toStartOf="@id/notes"
+        app:layout_constraintTop_toBottomOf="@id/notes"
+        app:layout_constraintEnd_toEndOf="@id/notes"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_delete"
+        android:background="@drawable/delete_background"
+        app:tint="@color/white"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/notes"
+        app:layout_constraintBottom_toBottomOf="@id/notes" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
